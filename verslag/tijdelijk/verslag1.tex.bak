@@ -1,0 +1,89 @@
+\documentclass[a4paper,10pt,twocolumn]{scrartcl}
+\usepackage{mystyle}
+% Title Page
+\title{Machine Learning Project 2010--2011}
+\subtitle{Meta-learning from an experiment database}
+\author{Jonas De Greef\and Li Quan}
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+For the machine learning project, we will study meta-learning from an experiment database\cite{Blockeel06-KDID:proc,42686}.% in order to understand and use machine learning algorithms better.
+\end{abstract}
+
+\section{Introduction}
+Instead of treating this project as a general and vague overview of the
+capabilities and usage of all algorithms and datasets, we will focus this
+project on a more in-depth and less general case study of very large datasets.
+
+Large datasets are very common in many software distributions that contain a fully
+developped and polished classifier to identify---for example medical treatments
+for a given set of symptoms.
+
+\section{Goals}
+We wish to process large datasets:
+\begin{itemize}
+\item without much side-effects (like overfitting and complexity);
+\item using a short amount of time and memory;
+\item maintaining a relative high accuracy.
+\end{itemize}
+
+\section{Problems}
+Of course, this requires a lot of memory and computational
+complexity\cite{bottou-bousquet-2008b}. As already seen during this course, large datasets
+will likely lead to complex models\cite{course,DBLP:conf/kdd/OatesJ98}.
+
+These problems evidently raise a few questions:
+\begin{itemize}
+ \item Are the datasets artificially generated or ``real-world'' examples and does this influence the accuracy\cite{Pfahringer:2000:MLV:645529.658105}?
+ \item What is the effect of noise?
+ \item Is it possible to preprocess the data (e.g.~pruning sparse attributes) for memory and time issues; or is better to postprocess the data?
+ \item How do we make the trade-off between time and accuracy?
+\end{itemize}
+
+It is our hope that by studying this very specific subdomain of the experiment database,
+we can offer a more satisfactory and in-depth answer to these questions.
+
+For the recommender system, we will first try to choose between two or three algorithms;
+secondly, if this works well, we can try to search the optimal parameters for different datasets.
+
+\section{Data representation}
+For the data representation, we will extract relevant data from the experiment database into
+a single table\cite{42801} and mine that table using the WEKA data mining tool\cite{weka}.
+
+We already experimented with the WEKA tool and created some useful views for our goals. %For example, the size of the datasets is quintessential for our purposes:
+%\begin{lstlisting}
+%SELECT did,value FROM data_property_value
+%WHERE dpid = 9
+%\end{lstlisting}
+We can query the database for the accuracy of all experiments on datasets with a size larger than a certain treshold:
+\begin{lstlisting}
+SELECT li.name, v.evalue, d.name
+FROM experiment e, learner_application la, learner_implementation li, dataset d, data_property_value dp, evaluation v, evaluation_metric m, evaluation_metric_implementation mi
+WHERE e.laid = la.laid and la.liid = li.liid and e.did = d.did and d.is_original='true' and v.eid = e.eid and v.emiid=mi.emiid and mi.emid=m.emid and m.name='predictive_accuracy' and d.did = dp.did and dp.dpid = 9 and dp.value > DATASETSIZE
+ORDER BY v.evalue desc
+\end{lstlisting}
+
+Similary for the learning curve:
+\begin{lstlisting}
+SELECT ev.evalue as pred_acc, (100 - pppv.value) as perc_size, li.name from experiment e, dataset di, dataset di2, data_property_value dp, preprocessing_step pps, preprocessor_application ppa, preprocessor_implementation ppi, preprocessor pp, preprocessor_parameter_value pppv, preprocessor_parameter ppp, evaluation ev, evaluation_metric em, evaluation_metric_implementation emi, learner_application la, learner_implementation li
+WHERE e.laid = la.laid and la.liid=li.liid and li.name=ALGORITHM and e.eid = ev.eid and ev.emiid = emi.emiid and emi.emid=em.emid and em.name='predictive_accuracy' and e.did = di.did and di.preprocessed_by = pps.ppsid and pps.did_in=di2.did and dp.did = di2.did and dp.dpid = 9 and dp.value > DATASETSIZE and pps.ppaid = ppa.ppaid and ppa.ppiid=ppi.ppiid and ppi.name='weka.RemovePercentage' and ppa.ppaid=pppv.ppaid and pppv.pppid=ppp.pppid and ppp.alias='percentage
+\end{lstlisting}
+We can also show the impact of data property DP on the percentage of bias error in the total error for a number of different algorithms (the query is not shown here because it is too long).
+
+\section{Conclusion}
+In conclusion, we will try to find the best learning algorithm for large datasets.
+If possible, we wil determine the influence of the parameters on both accuracy and time.
+
+%% Define a new 'leo' style for the package that will use a smaller font.
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+%% Now actually use the newly defined style.
+\urlstyle{leo}
+
+\bibliographystyle{acm}
+\bibliography{biblio}
+\end{document}

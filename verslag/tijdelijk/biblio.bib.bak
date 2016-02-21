@@ -1,0 +1,110 @@
+@InProceedings{ 42803,
+	AUTHOR = "Joaquin Vanschoren and Hendrik Blockeel",
+	TITLE = "{I}nvestigating classifier learning behavior with experiment databases",
+	BOOKTITLE = "{P}roceedings of {T}he 31st {A}nnual {C}onference of the {G}erman {C}lassification {S}ociety on {D}ata {A}nalysis, {M}achine {L}earning, and {A}pplications, {F}reiburg i. {B}r., {G}ermany",
+	YEAR = "2007",
+}
+
+@InProceedings{ Blockeel06-KDID:proc,
+	AUTHOR = "Hendrik Blockeel",
+	TITLE = "{E}xperiment databases: {A} novel methodology for experimental research",
+	BOOKTITLE = "{K}nowledge {D}iscovery in {I}nductive {D}atabases, 4th {I}nternational {W}orkshop, {KDID}'05, {R}evised, {S}elected and {I}nvited {P}apers",
+	YEAR = "2006",
+	EDITORS = "Bonchi, F. and Boulicaut, J-F.",
+	VOLUME = "3933",
+	SERIES = "Lecture Notes in Computer Science",
+	PAGES = "72--85",
+	PUBLISHER = "Springer",
+}
+
+@InProceedings{ 42686,
+	AUTHOR = "Joaquin Vanschoren and Anneleen {Van Assche} and Celine Vens and Hendrik Blockeel",
+	TITLE = "{M}eta-learning from experiment databases: {A}n illustration",
+	BOOKTITLE = "{B}enelearn 2007, {A}nnual {M}achine {L}earning {C}onference of {B}elgium and {T}he {N}etherlands",
+	YEAR = "2007",
+	EDITORS = "van Someren, M. and Katrenko, S. and Adriaans, P.",
+	PAGES = "120--127",
+}
+
+@InProceedings{ Pfahringer:2000:MLV:645529.658105,
+	author = "Bernhard Pfahringer and Hilan Bensusan and Christophe G. Giraud-Carrier",
+	title = "Meta-Learning by Landmarking Various Learning Algorithms",
+	booktitle = "Proceedings of the Seventeenth International Conference on Machine Learning",
+	series = "ICML '00",
+	year = "2000",
+	isbn = "1-55860-707-2",
+	pages = "743--750",
+	numpages = "8",
+	url = "http://portal.acm.org/citation.cfm?id=645529.658105",
+	acmid = "658105",
+	publisher = "Morgan Kaufmann Publishers Inc.",
+	address = "San Francisco, CA, USA"
+}
+
+@InProceedings{ DBLP:conf/kdd/OatesJ98,
+	author = "Tim Oates and David Jensen",
+	title = "Large Datasets Lead to Overly Complex Models: An Explanation and a Solution",
+	booktitle = "KDD",
+	year = "1998",
+	pages = "294--298",
+	bibsource = "DBLP, http://dblp.uni-trier.de"
+}
+
+@InCollection{ bottou-bousquet-2008b,
+	author = "L{\'e}on Bottou and Olivier Bousquet",
+	title = "Learning Using Large Datasets",
+	booktitle = "{Mining Massive DataSets for Security}",
+	publisher = "{IOS} {Press}",
+	address = "Amsterdam",
+	year = "2008",
+	series = "{NATO} {ASI} Workshop Series",
+	url = "http://leon.bottou.org/papers/bottou-bousquet-2008b"
+}
+
+@Article{ weka,
+	author = "Mark Hall and Eibe Frank and Geoffrey Holmes and Bernhard Pfahringer and Peter Reutemann and Ian H. Witten",
+	title = "The {WEKA} data mining software: an update",
+	journal = "SIGKDD Explor. Newsl.",
+	volume = "11",
+	issue = "1",
+	month = "November",
+	year = "2009",
+	issn = "1931-0145",
+	pages = "10--18",
+	numpages = "9",
+	url = "http://doi.acm.org/10.1145/1656274.1656278",
+	doi = "http://doi.acm.org/10.1145/1656274.1656278",
+	acmid = "1656278",
+	publisher = "ACM",
+	address = "New York, NY, USA"
+}
+
+@InProceedings{ Pfahringer00meta-learningby,
+	author = "Bernhard Pfahringer and Hilan Bensusan and Christophe Giraud-Carrier",
+	title = "Meta-Learning by Landmarking Various Learning Algorithms",
+	booktitle = "In Proceedings of the Seventeenth International Conference on Machine Learning",
+	year = "2000",
+	pages = "743--750",
+	publisher = "Morgan Kaufmann"
+}
+
+@Book{ course,
+	title = "Machine learning and {I}nductive {I}nference",
+	author = "Hendrik Blockeel",
+	publisher = "Acco",
+	year = "2010"
+}
+
+@INPROCEEDINGS {42801,
+AUTHOR = "Blockeel, Hendrik and Vanschoren, Joaquin",
+TITLE = {{E}xperiment databases: {T}owards an improved experimental methodology in machine learning},
+BOOKTITLE = {{K}nowledge {D}iscovery in {D}atabases: {PKDD} 2007, 11th {E}uropean {C}onference on {P}rinciples and {P}ractice of {K}nowledge {D}iscovery in {D}atabases, {P}roceedings},
+YEAR = {2007},
+EDITORS = {Kok, J. N. and Koronacki, J. and Lopez de Mantaras, R. and Matwin, S. and Mladenic, D. and Skowron, A.},
+VOLUME = {4702},
+SERIES = {Lecture Notes in Computer Science},
+PAGES = {6-17},
+PUBLISHER = {Springer},
+}
+
+

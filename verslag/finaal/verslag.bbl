@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{Blockeel06-KDID:proc}
+{\sc Blockeel, H.}
+\newblock {E}xperiment databases: {A} novel methodology for experimental
+  research.
+\newblock In {\em {K}nowledge {D}iscovery in {I}nductive {D}atabases, 4th
+  {I}nternational {W}orkshop, {KDID}'05, {R}evised, {S}elected and {I}nvited
+  {P}apers\/} (2006), vol.~3933 of {\em Lecture Notes in Computer Science},
+  Springer, pp.~72--85.
+
+\bibitem{42686}
+{\sc Vanschoren, J., {Van Assche}, A., Vens, C., and Blockeel, H.}
+\newblock {M}eta-learning from experiment databases: {A}n illustration.
+\newblock In {\em {B}enelearn 2007, {A}nnual {M}achine {L}earning {C}onference
+  of {B}elgium and {T}he {N}etherlands\/} (2007), pp.~120--127.
+
+\end{thebibliography}

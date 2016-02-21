@@ -1,0 +1,40 @@
+\begin{thebibliography}{1}
+
+\bibitem{course}
+{\sc Blockeel, H.}
+\newblock {\em Machine learning and {I}nductive {I}nference}.
+\newblock Acco, 2010.
+
+\bibitem{bottou-bousquet-2008b}
+{\sc Bottou, L., and Bousquet, O.}
+\newblock Learning using large datasets.
+\newblock In {\em {Mining Massive DataSets for Security}}, {NATO} {ASI}
+  Workshop Series. {IOS} {Press}, Amsterdam, 2008.
+
+\bibitem{weka}
+{\sc Hall, M., Frank, E., Holmes, G., Pfahringer, B., Reutemann, P., and
+  Witten, I.~H.}
+\newblock The {WEKA} data mining software: an update.
+\newblock {\em SIGKDD Explor. Newsl. 11\/} (November 2009), 10--18.
+
+\bibitem{DBLP:conf/kdd/OatesJ98}
+{\sc Oates, T., and Jensen, D.}
+\newblock Large datasets lead to overly complex models: An explanation and a
+  solution.
+\newblock In {\em KDD\/} (1998), pp.~294--298.
+
+\bibitem{Pfahringer00meta-learningby}
+{\sc Pfahringer, B., Bensusan, H., and Giraud-Carrier, C.}
+\newblock Meta-learning by landmarking various learning algorithms.
+\newblock In {\em In Proceedings of the Seventeenth International Conference on
+  Machine Learning\/} (2000), Morgan Kaufmann, pp.~743--750.
+
+\bibitem{42686}
+{\sc Vanschoren, J., {Van Assche}, A., Vens, C., and Blockeel, H.}
+\newblock {M}eta-learning from experiment databases: {A}n illustration.
+\newblock In {\em {B}enelearn 2007, {A}nnual {M}achine {L}earning {C}onference
+  of {B}elgium and {T}he {N}etherlands\/} (2007), pp.~120--127.
+\newblock URL:
+  http://www.cs.kuleuven.ac.be/cgi-bin-dtai/publ\\_info.pl?id=42686.
+
+\end{thebibliography}

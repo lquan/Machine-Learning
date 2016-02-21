@@ -1,0 +1,57 @@
+\begin{thebibliography}{1}
+
+\bibitem{Blockeel06-KDID:proc}
+{\sc Blockeel, H.}
+\newblock {E}xperiment databases: {A} novel methodology for experimental
+  research.
+\newblock In {\em {K}nowledge {D}iscovery in {I}nductive {D}atabases, 4th
+  {I}nternational {W}orkshop, {KDID}'05, {R}evised, {S}elected and {I}nvited
+  {P}apers\/} (2006), vol.~3933 of {\em Lecture Notes in Computer Science},
+  Springer, pp.~72--85.
+
+\bibitem{course}
+{\sc Blockeel, H.}
+\newblock {\em Machine learning and {I}nductive {I}nference}.
+\newblock Acco, 2010.
+
+\bibitem{42801}
+{\sc Blockeel, H., and Vanschoren, J.}
+\newblock {E}xperiment databases: {T}owards an improved experimental
+  methodology in machine learning.
+\newblock In {\em {K}nowledge {D}iscovery in {D}atabases: {PKDD} 2007, 11th
+  {E}uropean {C}onference on {P}rinciples and {P}ractice of {K}nowledge
+  {D}iscovery in {D}atabases, {P}roceedings\/} (2007), vol.~4702 of {\em
+  Lecture Notes in Computer Science}, Springer, pp.~6--17.
+
+\bibitem{bottou-bousquet-2008b}
+{\sc Bottou, L., and Bousquet, O.}
+\newblock Learning using large datasets.
+\newblock In {\em {Mining Massive DataSets for Security}}, {NATO} {ASI}
+  Workshop Series. {IOS} {Press}, Amsterdam, 2008.
+
+\bibitem{weka}
+{\sc Hall, M., Frank, E., Holmes, G., Pfahringer, B., Reutemann, P., and
+  Witten, I.~H.}
+\newblock The {WEKA} data mining software: an update.
+\newblock {\em SIGKDD Explor. Newsl. 11\/} (November 2009), 10--18.
+
+\bibitem{DBLP:conf/kdd/OatesJ98}
+{\sc Oates, T., and Jensen, D.}
+\newblock Large datasets lead to overly complex models: An explanation and a
+  solution.
+\newblock In {\em KDD\/} (1998), pp.~294--298.
+
+\bibitem{Pfahringer:2000:MLV:645529.658105}
+{\sc Pfahringer, B., Bensusan, H., and Giraud-Carrier, C.~G.}
+\newblock Meta-learning by landmarking various learning algorithms.
+\newblock In {\em Proceedings of the Seventeenth International Conference on
+  Machine Learning\/} (San Francisco, CA, USA, 2000), ICML '00, Morgan Kaufmann
+  Publishers Inc., pp.~743--750.
+
+\bibitem{42686}
+{\sc Vanschoren, J., {Van Assche}, A., Vens, C., and Blockeel, H.}
+\newblock {M}eta-learning from experiment databases: {A}n illustration.
+\newblock In {\em {B}enelearn 2007, {A}nnual {M}achine {L}earning {C}onference
+  of {B}elgium and {T}he {N}etherlands\/} (2007), pp.~120--127.
+
+\end{thebibliography}

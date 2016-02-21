@@ -1,0 +1,99 @@
+SELECT d.name, dp.value as size
+FROM dataset d,
+data_property_value dp
+WHERE d.is_original='true' and d.did = dp.did and dp.dpid = 9
+ORDER BY size
+
+--> Werken met <5000
+
+SELECT temp.name, count(count) FROM
+(SELECT d.name, count(li.name) as count FROM 
+dataset d,
+data_property_value dp,
+experiment e,
+learner_implementation li,
+learner_application la
+WHERE e.laid = la.laid and la.liid = li.liid and d.is_original='true' and d.did = dp.did and dp.dpid = 9 and dp.value >= 5000 and e.did = d.did
+GROUP BY d.name, li.name
+ORDER BY dp.value) as temp
+GROUP BY name
+
+--> op iedere dataset zijn 54 algoritmes uitgevoerd
+--> Niet van toepassing:
+weka.AdditiveRegression
+weka.KStar
+weka.LeastMedSq
+weka.LinearRegression
+weka.M5P
+weka.M5Rules
+weka.none
+weka.PCANNSearch
+weka.PLSNNSearch
+weka.RegressionByDiscretization
+weka.SMOreg
+
+SELECT d.name, dp.value
+FROM dataset d,
+data_property_value dp,
+(SELECT d.did FROM dataset d,
+data_property_value dp
+WHERE d.did = dp.did and dp.dpid = 9 and dp.value >= 5000 ORDER BY dp.value) as temp
+WHERE temp.did = d.did and dp.did = d.did and dp.dpid = 38
+
+--> AVG 27 attributes versus 31 over all datasets
+--> AVG 37,77 noise ratio versus 29,3 over all datasets
+
+SELECT d.name, avg(ev.evalue), max(ev.evalue), min(ev.evalue)
+FROM
+dataset d,
+data_property_value dp,
+experiment e,
+learner_application la,
+learner_implementation li,
+evaluation ev
+WHERE d.did = dp.did and dp.dpid = 9 and dp.value >= 5000 and
+d.did = e.did and la.laid = e.laid and la.liid = li.liid and
+e.eid = ev.eid and ev.emiid = 1
+GROUP BY d.name
+ORDER BY dp.value
+
+IMPORTANT: wat zijn de grootheden??!
+
+SELECT d.name, li.name, ev2.evalue as build_CPU, ev3.evalue as build_mem, ev.evalue as run_CPU, ev4.evalue as run_mem, ev1.evalue as pred_acc
+FROM
+dataset d,
+experiment e,
+learner_application la,
+learner_implementation li,
+evaluation ev,
+evaluation ev1,
+evaluation ev2,
+evaluation ev3,
+evaluation ev4
+WHERE d.did = 188 and
+d.did = e.did and la.laid = e.laid and la.liid = li.liid and
+e.eid = ev.eid and ev2.eid = e.eid and ev3.eid = e.eid and ev4.eid = e.eid and ev2.emiid = 1 and ev3.emiid = 2 and ev4.emiid = 4 and ev.emiid = 3 and ev1.emiid = 6 and e.eid = ev1.eid
+
+
+SELECT li.name as alg_name, d.name as dataset, p1.value as param1, p2.value as param2, p3.value as param3, p4.value as param4, p5.value as param5, p6.value as param6, p7.value as param7, p8.value as param8, p9.value as param9, p10.value as param10
+FROM
+dataset d,
+data_property_value dp,
+experiment e,
+learner_application la,
+learner_implementation li,
+learner_parameter_value p1,
+learner_parameter_value p2,
+learner_parameter_value p3,
+learner_parameter_value p4,
+learner_parameter_value p5,
+learner_parameter_value p6,
+learner_parameter_value p7,
+learner_parameter_value p8,
+learner_parameter_value p9,
+learner_parameter_value p10
+WHERE d.did = dp.did and dp.dpid = 9 and dp.value >= 5000 and
+d.did = e.did and la.laid = e.laid and la.liid = li.liid and 
+p1.laid = la.laid and p2.laid = la.laid and p3.laid = la.laid and p4.laid = la.laid and p5.laid = la.laid and p6.laid = la.laid and p7.laid = la.laid and p8.laid = la.laid and p9.laid = la.laid and p10.laid = la.laid and
+p1.lpid = 63 and p2.lpid = 64 and p3.lpid = 65 and p4.lpid = 66 and p5.lpid = 67 and p6.lpid = 68 and p7.lpid = 69 and p8.lpid = 70 and p9.lpid = 71 and p10.lpid = 72 and
+li.name = "weka.J48"

@@ -1,0 +1,70 @@
+% Query:
+% SELECT li.name, avg(ev.evalue), max(ev.evalue), min(ev.evalue)
+% FROM
+% dataset d,
+% data_property_value dp,
+% experiment e,
+% learner_application la,
+% learner_implementation li,
+% evaluation ev
+% WHERE d.did = dp.did and dp.dpid = 9 and dp.value >= 5000 and
+% d.did = e.did and la.laid = e.laid and la.liid = li.liid and
+% e.eid = ev.eid and ev.emiid = 3
+% GROUP BY li.name
+% ORDER BY dp.value
+
+name,avg(ev.evalue),max(ev.evalue),min(ev.evalue)
+weka.Ridor,861.43166898936,4368,0.8
+weka.AODE,45.0837499797344,223,0.5
+weka.ThresholdSelector,261.112122954744,948.21,6.11
+weka.Winnow,23.0286956533142,30,0.66
+weka.LBR,7587.31006103382,22440.9,0.48
+weka.ADTree,60.2300008138021,135.69,20
+weka.RBFNetwork,743.765400765737,4318,1.21
+weka.VotedPerceptron,425.787499186893,4516.98,0.92
+weka.Id3,276.02600004673,1257,1.91
+weka.Prism,107.930000305176,145,35.79
+weka.Logistic,13564.6174638782,180102,3.1
+weka.Stacking,54.8733673381562,362,1.88
+weka.DecisionTable,143.526249885559,547,16
+weka.LMT,16214.0853701505,184430,206.81
+weka.RandomForest,154.802169536365,2990.16,1.45
+weka.IBk,4908.23284654851,113932,0.48
+weka.Vote,26.1851724283449,295,0.5
+weka.StackingC,76.7273822205229,369,8.83
+weka.J48,103.989434441257,5855.65,0.55
+weka.NNge,230.697892261179,999.29,0.94
+weka.RandomTree,226.46432303451,2283,0.65
+weka.NaiveBayesSimple,33.0476190632298,195,0.48
+weka.HyperPipes,24.0475862128981,193,0.51
+weka.AttributeSelectedClassifier,58.5435714189495,301.25,0.71
+weka.Decorate,5209.04192002614,66688.3,4.33
+weka.DecisionStump,30.2006895233845,204,0.44
+weka.REPTree,76.9637878443858,395.2,0.66
+weka.IB1,3669.50332092281,84762.2,0.47
+weka.NBTree,7270.87643374716,77833,8.29
+weka.MultiClassClassifier,349.328768741167,3082.89,2.95
+weka.PART,1452.59958778245,219196,0.56
+weka.SMO,8370.23288797177,432671,4.12
+weka.JRip,819.116084528257,4707,1.01
+weka.OneR,58.7721568657328,353,0.49
+weka.CVParameterSelection,51.7797448995466,341,0.47
+weka.NaiveBayes,31.4606896988277,194,0.56
+weka.ZeroR,25.0820689694635,243,0.43
+weka.MultilayerPerceptron,9281.18005839324,114766,197.58
+weka.AdaBoostM1,3725.34883173847,160556,0.58
+weka.VFI,29.6610714197159,230,0.52
+weka.ClassificationViaRegression,1576.41807381923,16468,5.47
+weka.FilteredClassifier,59.0935707390308,371.46,0.61
+weka.BayesNet,56.7333333333333,261,13
+weka.MultiBoostAB,5859.7749268067,571087,0.77
+weka.RandomCommittee,11657.9176967077,156316,1.53
+weka.RacedIncrementalLogitBoost,164.733163206857,595,0.68
+weka.LogitBoost,4730.91366440681,84699,1
+weka.MultiScheme,51.6536945809284,327,0.53
+weka.SimpleLogistic,10027.7497953687,72479,90.55
+weka.ConjunctiveRule,101.242523949123,1318.17,0.62
+weka.OrdinalClassClassifier,547.648571512529,7041.25,0.64
+weka.LWL,6752.43196162105,58229.2,0.47
+weka.Bagging,7965.14267312115,598396,0.37
+weka.NaiveBayesUpdateable,34.345172297338,213,0.48

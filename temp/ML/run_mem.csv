@@ -1,0 +1,27 @@
+% Query:
+% SELECT d.name, avg(ev.evalue), max(ev.evalue), min(ev.evalue)
+% FROM
+% dataset d,
+% data_property_value dp,
+% experiment e,
+% learner_application la,
+% learner_implementation li,
+% evaluation ev
+% WHERE d.did = dp.did and dp.dpid = 9 and dp.value >= 5000 and
+% d.did = e.did and la.laid = e.laid and la.liid = li.liid and
+% e.eid = ev.eid and ev.emiid = 4
+% GROUP BY d.name
+% ORDER BY dp.value
+
+name,avg(ev.evalue),max(ev.evalue),min(ev.evalue)
+waveform-5000,181492491.136231,9.80782e+08,0
+page-blocks,136213883.851618,9.72331e+08,0
+optdigits,265060088.461892,9.82844e+08,0
+satimage,253571168.093168,9.80969e+08,0
+mushroom,183779309.956627,1.95417e+09,0
+pendigits,263139010.630037,9.8084e+08,0
+nursery,267505077.16351,9.8027e+08,0
+letter,412426453.448164,2.02386e+09,5.70697e+07
+kropt,424931551.794267,2.04835e+09,3.41561e+07
+adult,363894967.369628,2.03933e+09,1.76132e+07
+covertype,481876602.964453,9.82309e+08,2.18715e+07

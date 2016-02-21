@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: verslag.aux
+The style file: acm.bst
+Database file #1: biblio.bib
+Repeated entry---line 231 of file biblio.bib
+ : @inproceedings {Blockeel06-KDID:proc
+ :                                     ,
+I'm skipping whatever remains of this entry
+You've used 2 entries,
+            2253 wiz_defined-function locations,
+            543 strings with 4455 characters,
+and the built_in function-call counts, 917 in all, are:
+= -- 90
+> -- 29
+< -- 0
++ -- 12
+- -- 10
+* -- 65
+:= -- 132
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 11
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 46
+empty$ -- 83
+format.name$ -- 10
+if$ -- 206
+int.to.chr$ -- 0
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 13
+num.names$ -- 4
+pop$ -- 17
+preamble$ -- 1
+purify$ -- 9
+quote$ -- 0
+skip$ -- 35
+stack$ -- 0
+substring$ -- 66
+swap$ -- 19
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 8
+warning$ -- 0
+while$ -- 10
+width$ -- 3
+write$ -- 24
+(There was 1 error message)
